@@ -7,8 +7,6 @@ services:
     restart: unless-stopped
     environment:
       - TZ=${TIME_ZONE}
+    volumes:
       - ${MOUNT_POINT}fetch-helper/logs:/logs
       - ${SMB_SHARE_MOUNT_POINT}Fetch:/recordings
-    volumes:
-      - ./logs:/logs
-      - ./recordings:/recordings
