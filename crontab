@@ -1,1 +1,1 @@
-*/1 * * * * python /fetchtv_upnp.py --recordings --new --ip=192.168.1.145 --save="/recordings" >> /logs/logfile_145.log; python /fetchtv_upnp.py --recordings --new --ip=192.168.1.155 --save="/recordings" >> /logs/logfile_155.log
+* */1 * * * python /fetchtv_upnp.py --recordings --new --ip=192.168.1.145 --save="/recordings" >> /logs/logfile_145.log; python /fetchtv_upnp.py --recordings --new --ip=192.168.1.155 --save="/recordings" >> /logs/logfile_155.log
