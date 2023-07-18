@@ -1,0 +1,14 @@
+services:
+  fetchtv-upnp:
+    container_name: FetchTV_upnp
+    build:
+      dockerfile: .Dockerfile
+    network_mode: "host"
+    restart: unless-stopped
+    environment:
+      - TZ=${TIME_ZONE}
+      - ${MOUNT_POINT}fetch-helper/logs:/logs
+      - ${SMB_SHARE_MOUNT_POINT}Fetch:/recordings
+    volumes:
+      - ./logs:/logs
+      - ./recordings:/recordings
